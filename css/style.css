@@ -87,7 +87,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url(/images/home-background.png) no-repeat;
+    background: url(https://meialbertzend.github.io/web-portofolio/images/home-background.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
