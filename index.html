@@ -304,15 +304,18 @@
     <!-- contact section design -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span><span style="--i:1;"></span></h2>
-
-        <form action="#">
+        <div id="success-alert" class="my-alert hidden">
+            Form submitted successfully!
+            <button id="close-alert" class="close-alert">&times;</button>
+          </div>
+        <form name="contact-form">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Full Name" name="full_name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Adress" required>
+                    <input type="text" placeholder="Email Adress" name="email_adress" required>
                     <span class="focus"></span>
                 </div>
 
@@ -321,11 +324,7 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input type="number" placeholder="Mobile Number" name="mobile_number" required>
                     <span class="focus"></span>
                 </div>
 
@@ -333,17 +332,18 @@
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <span class="focus"></span>
 
                 <span style="--i:7;"></span>
             </div>
 
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-
-                <span style="--i:9;"></span>
+            <div class="btns">
+                <button type="submit" class="btn-submit btn">Submit</button>
             </div>
+            <div class="loader hidden"></div>
+                <span style="--i:9;"></span>
+            
         </form>
     </section>
 

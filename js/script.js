@@ -47,3 +47,34 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+//Form to google sheets
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyimwJTlIg5tA7rNsHWEOnpW8xb2TQGbgv6LAO2r9Ho96aDj08qa1_RYAXLFtwFEuKNcw/exec'
+const form = document.forms['contact-form']
+const btnSubmit = document.querySelector('.btn-submit');
+const loader = document.querySelector('.loader');
+const myAlert = document.querySelector('.my-alert');
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  // Ketika tombol sumbit diklik
+  // tampilkan loader hilangkan tombol kirim
+  loader.classList.toggle('hidden');
+  btnSubmit.classList.toggle('hidden');
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+  // tampilkan kirim hilangkan tombol loader
+        loader.classList.toggle('hidden');
+        btnSubmit.classList.toggle('hidden');
+        //tampilkan alert
+        myAlert.classList.toggle('hidden');
+        //reset form
+        form.reset();
+        console.log('Success!', response)
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+document.getElementById('close-alert').addEventListener('click', function() {
+    document.getElementById('success-alert').classList.add('hidden');
+});
+

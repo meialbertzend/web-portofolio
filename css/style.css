@@ -28,6 +28,7 @@ body {
     color: var(--text-color);
 }
 
+
 .header {
     position: fixed;
     top: 0;
@@ -163,8 +164,8 @@ section {
 
 .btn-box .btn {
     position: relative;
-    display: inline-flex;
     justify-content: center;
+    display: inline-flex;
     align-items: center;
     width: 15rem;
     height: 100%;
@@ -178,6 +179,20 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+}
+
+.btn-submit {
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    padding: 12px;
 }
 
 .btn-box .btn:hover {
@@ -342,8 +357,8 @@ span {
 }
 
 .btn-box.btns {
-    display: inline-block;
     width: 15rem;
+    display: inline-block;
 }
 
 .btn-box.btns a::before {
@@ -694,7 +709,7 @@ span {
 
 .contact form .input-box .input-field {
     position: relative;
-    width: 49%;
+    width: 100%;
     margin: .8rem 0;
 }
 
@@ -779,6 +794,55 @@ span {
     overflow: hidden;
 }
 
+/*alert*/
+#success-alert {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--second-bg-color);
+    color: var(--text-color));
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    font-size: 15px;
+    max-width: 70rem;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .close-alert {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    color: #0000;
+    background: linear-gradient(90deg,var(--text-color) calc(50% + 0.5ch),var(--main-color) 0) right/calc(200% + 1ch) 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: l7 2s infinite steps(11);
+    display: inline-block;
+  }
+  .loader:before {
+    content:"Loading..."
+  }
+  @keyframes l7 {to{background-position: left}}
+
+.hidden {
+    display: none;
+}
+
+ 
 .footer-iconTop a::before {
     content: '';
     position: absolute;
@@ -1028,3 +1092,4 @@ span {
         grid-template-columns: 1fr;
     }
 }
+
