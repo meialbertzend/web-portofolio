@@ -798,7 +798,7 @@ span {
 #success-alert {
     margin-top: 20px;
     padding: 15px;
-    background-color: var(--second-bg-color);
+    background-color:  #40A578;
     color: var(--text-color));
     border: 1px solid var(--main-color);
     border-radius: 4px;
