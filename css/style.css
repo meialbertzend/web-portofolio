@@ -799,16 +799,16 @@ span {
     margin-top: 20px;
     padding: 15px;
     background-color:  #40A578;
-    color: var(--text-color));
+    color: var(--text-color);
     border: 1px solid var(--main-color);
     border-radius: 4px;
     font-size: 15px;
     max-width: 70rem;
     position: relative;
     margin: 0 auto;
-  }
+}
 
-  .close-alert {
+.close-alert {
     background: none;
     border: none;
     font-size: 20px;
@@ -818,8 +818,8 @@ span {
     position: absolute;
     top: 5px;
     right: 10px;
-  }
-  
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: fit-content;
