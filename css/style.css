@@ -96,6 +96,10 @@ section {
 .home-content {
     max-width: 60rem;
     z-index: 99;
+    /* Add a max-height to ensure content doesn't push buttons too far down */
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .home-content h1 {
@@ -152,6 +156,25 @@ section {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+    /* Add these properties to handle long text */
+    max-height: 30vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Add a scrollbar styling for the paragraph */
+.home-content p::-webkit-scrollbar {
+    width: 6px;
+}
+
+.home-content p::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.home-content p::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
 }
 
 .btn-box {
@@ -234,6 +257,8 @@ section {
     width: 170px;
     display: flex;
     justify-content: space-between;
+    /* Ensure this is always visible */
+    z-index: 100;
 }
 
 .home-sci a {
